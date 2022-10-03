@@ -8,6 +8,10 @@ import (
 )
 
 func main() {
+	if len(os.Args) < 2 {
+		fmt.Println("Please enter a domain name")
+		return
+	}
 	url := os.Args[1]
 	if url == "" {
 		log.Fatal("Please provide a domain name")
